@@ -1,0 +1,47 @@
+
+	 <!DOCTYPE html>
+	 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	 <head>
+		 <meta charset="utf-8" />
+		 <title>web_1920___37</title>
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		 <meta name="description" content="">
+		 <link rel="stylesheet" type="text/css" href="web_1920___37.css">
+		 <script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=6"></script>
+	 </head>
+	 <body>
+		 <div id="three-js-canvas-container"></div>
+		 <script>
+			 var specialChars = document.querySelectorAll("span.char");
+			 for (var c = 0; c < specialChars.length; c++) {
+				 specialChars[c].innerHTML = decodeURIComponent(specialChars[c].innerHTML);
+			 }
+		 </script>
+
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/16/Stats.min.js"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+		 <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+		 <script type="importmap">
+		 {
+			 "imports": {
+				 "three": "https://unpkg.com/three@0.156.1/build/three.module.js",
+				 "three/addons/": "https://unpkg.com/three@0.156.1/examples/jsm/"
+			 }
+		 }
+		 </script>
+		 <script type="module">
+			 import * as THREE from 'three';
+			 import Stats from 'three/addons/libs/stats.module.js';
+			 import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
+			 import { MarchingCubes } from 'three/addons/objects/MarchingCubes.js';
+			 import { ToonShader1, ToonShader2, ToonShaderHatching, ToonShaderDotted } from 'three/addons/shaders/ToonShader.js';
+			 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+			 
+			 window.THREE = THREE;
+			 window.OrbitControls = OrbitControls;
+		 </script>
+		 <script defer src="main.js"></script>
+	 </body>
+	 </html>
+	 
